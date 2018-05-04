@@ -4,7 +4,7 @@ data_electricity <- read.csv("C:/Users/ivishnoi/Downloads/exdata%2Fdata%2Fhouseh
 ## Subsetting the data
 data_new <- data_electricity[data_electricity$Date %in% c("1/2/2007","2/2/2007") ,]
 
-#str(subSetData)
+#Making the plot
 datetime <- strptime(paste(data_new$Date, data_new$Time, sep=" "), "%d/%m/%Y %H:%M:%S") 
 globalActivePower <- as.numeric(data_new$Global_active_power)
 png("plot2.png", width=480, height=480)
